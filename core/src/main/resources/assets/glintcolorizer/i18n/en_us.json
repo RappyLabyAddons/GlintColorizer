@@ -1,8 +1,31 @@
 {
   "glintcolorizer": {
     "settings": {
+      "header": {
+        "items": {
+          "name": "Enchanted items"
+        },
+        "armor": {
+          "name": "Enchanted armor"
+        }
+      },
       "enabled": {
         "name": "Enabled"
+      },
+      "itemGlowEffect": {
+        "name": "Glow effect"
+      },
+      "itemGlintEffect": {
+        "name": "Glint effect"
+      },
+      "itemGlintColor": {
+        "name": "Glint color"
+      },
+      "armorGlintEffect": {
+        "name": "Glint effect"
+      },
+      "armorGlintColor": {
+        "name": "Glint color"
       }
     }
   }
