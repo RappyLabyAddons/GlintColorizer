@@ -14,6 +14,7 @@
       },
       "itemEffect": {
         "name": "Glow effect",
+        "description": "§bNone: §rRemoves all visual effects from enchanted items\n§bDefault: §rThe default vanilla glint\n§bGlow: §rAdds an additional glow effect around the item",
         "entries": {
           "none": "None",
           "default": "Default",
@@ -21,16 +22,20 @@
         }
       },
       "enableCustomItemGlintColor": {
-        "name": "Custom glint color"
+        "name": "Custom glint color",
+        "description": "If you want to enable the custom glint color for enchanted items"
       },
       "customItemGlintColor": {
-        "name": "Glint color"
+        "name": "Glint color",
+        "description": "Choose the custom glint color for enchanted items"
       },
       "enableCustomArmorGlintColor": {
-        "name": "Custom glint color"
+        "name": "Custom glint color",
+        "description": "If you want to enable the custom glint color for enchanted armor"
       },
       "customArmorGlintColor": {
-        "name": "Glint color"
+        "name": "Glint color",
+        "description": "Choose the custom glint color for enchanted armor"
       }
     }
   }
