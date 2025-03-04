@@ -16,7 +16,7 @@ labyMod {
         displayName = "GlintColorizer"
         author = "RappyTV"
         description = "Lets you adjust the color of enchanted items and armor."
-        minecraftVersion = "*"
+        minecraftVersion = "1.8.9,1.12.2"
         version = rootProject.version.toString()
     }
 
