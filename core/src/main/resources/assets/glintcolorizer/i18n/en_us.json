@@ -12,19 +12,24 @@
       "enabled": {
         "name": "Enabled"
       },
-      "itemGlowEffect": {
-        "name": "Glow effect"
+      "itemEffect": {
+        "name": "Glow effect",
+        "entries": {
+          "none": "None",
+          "default": "Default",
+          "glow": "Glow"
+        }
       },
-      "itemGlintEffect": {
-        "name": "Glint effect"
+      "enableCustomItemGlintColor": {
+        "name": "Custom glint color"
       },
-      "itemGlintColor": {
+      "customItemGlintColor": {
         "name": "Glint color"
       },
-      "armorGlintEffect": {
-        "name": "Glint effect"
+      "enableCustomArmorGlintColor": {
+        "name": "Custom glint color"
       },
-      "armorGlintColor": {
+      "customArmorGlintColor": {
         "name": "Glint color"
       }
     }

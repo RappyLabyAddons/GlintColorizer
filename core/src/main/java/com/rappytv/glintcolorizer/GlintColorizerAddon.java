@@ -1,5 +1,6 @@
 package com.rappytv.glintcolorizer;
 
+import com.rappytv.glintcolorizer.GlintColorizerConfig.ItemEffect;
 import net.labymod.api.addon.LabyAddon;
 import net.labymod.api.models.addon.annotation.AddonMain;
 import net.labymod.api.util.Color;
@@ -22,23 +23,27 @@ public class GlintColorizerAddon extends LabyAddon<GlintColorizerConfig> {
     return GlintColorizerConfig.class;
   }
 
-  public static boolean isItemGlowEnabled() {
-    return instance.configuration().enabled().get() && instance.configuration().itemGlowEffect().get();
+  public static ItemEffect getItemEffect() {
+    return instance.configuration().enabled().get()
+        ? instance.configuration().itemEffect().get()
+        : ItemEffect.DEFAULT;
   }
 
   @Nullable
   public static Color getItemGlintColor() {
-    if(!instance.configuration().enabled().get() || !instance.configuration().itemGlintEffect().get()) {
+    if(!instance.configuration().enabled().get()
+        || !instance.configuration().enableCustomItemGlintColor().get()) {
       return null;
     }
-    return instance.configuration().itemGlintColor().get();
+    return instance.configuration().customItemGlintColor().get();
   }
 
   @Nullable
   public static Color getArmorGlintColor() {
-    if(!instance.configuration().enabled().get() || !instance.configuration().armorGlintEffect().get()) {
+    if(!instance.configuration().enabled().get()
+        || !instance.configuration().enableCustomArmorGlintColor().get()) {
       return null;
     }
-    return instance.configuration().armorGlintColor().get();
+    return instance.configuration().customArmorGlintColor().get();
   }
 }
