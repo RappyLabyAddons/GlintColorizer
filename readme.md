@@ -1,6 +1,6 @@
 # GlintColorizer
 ![Downloads](https://labybadges-delta.vercel.app/api/downloads/glintcolorizer/formatted)<br>
-Lets you adjust the color of enchanted items and armor.
+With this addon you can adjust the color of enchanted items the glint of enchanted and armor.
 
 ### Installation
 1. Press `Win` + `R`
@@ -10,7 +10,4 @@ Lets you adjust the color of enchanted items and armor.
    in there.
 4. Launch your Labymod client.
 
-If you have any problems with the addon/have update ideas, feel free to
-- Open an Issue [here](https://github.com/RappyLabyAddons/GlintColorizer/issues/new)
-  or
-- Open a ticket on my [Discord Server](https://rappytv.com/server) in [this](https://discord.com/channels/815912035124248587/840285653946204181) channel
+ℹ️ If you have any problems with the addon/have update ideas, feel free to open an Issue [here](https://github.com/RappyLabyAddons/GlintColorizer/issues/new)!
