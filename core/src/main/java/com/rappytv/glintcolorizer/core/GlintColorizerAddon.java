@@ -1,6 +1,6 @@
-package com.rappytv.glintcolorizer;
+package com.rappytv.glintcolorizer.core;
 
-import com.rappytv.glintcolorizer.GlintColorizerConfig.ItemEffect;
+import com.rappytv.glintcolorizer.api.ItemEffect;
 import net.labymod.api.addon.LabyAddon;
 import net.labymod.api.models.addon.annotation.AddonMain;
 import net.labymod.api.util.Color;
@@ -9,11 +9,11 @@ import org.jetbrains.annotations.Nullable;
 @AddonMain
 public class GlintColorizerAddon extends LabyAddon<GlintColorizerConfig> {
 
-  private static GlintColorizerAddon instance;
+  private static GlintColorizerAddon INSTANCE;
 
   @Override
   protected void enable() {
-    instance = this;
+    INSTANCE = this;
 
     this.registerSettingCategory();
   }
@@ -24,26 +24,26 @@ public class GlintColorizerAddon extends LabyAddon<GlintColorizerConfig> {
   }
 
   public static ItemEffect getItemEffect() {
-    return instance.configuration().enabled().get()
-        ? instance.configuration().itemEffect().get()
+    return INSTANCE.configuration().enabled().get()
+        ? INSTANCE.configuration().itemEffect().get()
         : ItemEffect.DEFAULT;
   }
 
   @Nullable
   public static Color getItemGlintColor() {
-    if(!instance.configuration().enabled().get()
-        || !instance.configuration().enableCustomItemGlintColor().get()) {
+    if (!INSTANCE.configuration().enabled().get()
+        || !INSTANCE.configuration().enableCustomItemGlintColor().get()) {
       return null;
     }
-    return instance.configuration().customItemGlintColor().get();
+    return INSTANCE.configuration().customItemGlintColor().get();
   }
 
   @Nullable
   public static Color getArmorGlintColor() {
-    if(!instance.configuration().enabled().get()
-        || !instance.configuration().enableCustomArmorGlintColor().get()) {
+    if (!INSTANCE.configuration().enabled().get()
+        || !INSTANCE.configuration().enableCustomArmorGlintColor().get()) {
       return null;
     }
-    return instance.configuration().customArmorGlintColor().get();
+    return INSTANCE.configuration().customArmorGlintColor().get();
   }
 }

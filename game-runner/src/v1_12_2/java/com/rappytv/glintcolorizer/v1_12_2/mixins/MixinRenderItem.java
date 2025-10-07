@@ -1,7 +1,7 @@
 package com.rappytv.glintcolorizer.v1_12_2.mixins;
 
-import com.rappytv.glintcolorizer.GlintColorizerAddon;
-import com.rappytv.glintcolorizer.GlintColorizerConfig.ItemEffect;
+import com.rappytv.glintcolorizer.api.ItemEffect;
+import com.rappytv.glintcolorizer.core.GlintColorizerAddon;
 import net.labymod.api.util.Color;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderItem;

@@ -1,5 +1,6 @@
-package com.rappytv.glintcolorizer;
+package com.rappytv.glintcolorizer.core;
 
+import com.rappytv.glintcolorizer.api.ItemEffect;
 import net.labymod.api.addon.AddonConfig;
 import net.labymod.api.client.component.format.NamedTextColor;
 import net.labymod.api.client.gui.screen.widget.widgets.input.SwitchWidget.SwitchSetting;
@@ -12,7 +13,7 @@ import net.labymod.api.configuration.settings.annotation.SettingRequires;
 import net.labymod.api.configuration.settings.annotation.SettingSection;
 import net.labymod.api.util.Color;
 
-@SpriteTexture("settings.png")
+@SpriteTexture("settings")
 public class GlintColorizerConfig extends AddonConfig {
 
   @SpriteSlot
@@ -23,9 +24,11 @@ public class GlintColorizerConfig extends AddonConfig {
   @SpriteSlot(x = 1)
   @DropdownSetting
   private final ConfigProperty<ItemEffect> itemEffect = new ConfigProperty<>(ItemEffect.DEFAULT);
+
   @SpriteSlot(size = 32, x = 2)
   @SwitchSetting
   private final ConfigProperty<Boolean> enableCustomItemGlintColor = new ConfigProperty<>(true);
+
   @SettingRequires("enableCustomItemGlintColor")
   @SpriteSlot(size = 32, x = 3)
   @ColorPickerSetting(chroma = true)
@@ -35,6 +38,7 @@ public class GlintColorizerConfig extends AddonConfig {
   @SpriteSlot(x = 2)
   @SwitchSetting
   private final ConfigProperty<Boolean> enableCustomArmorGlintColor = new ConfigProperty<>(true);
+
   @SettingRequires("enableCustomArmorGlintColor")
   @SpriteSlot(size = 32, x = 3)
   @ColorPickerSetting(chroma = true)
@@ -48,9 +52,11 @@ public class GlintColorizerConfig extends AddonConfig {
   public ConfigProperty<ItemEffect> itemEffect() {
     return this.itemEffect;
   }
+
   public ConfigProperty<Boolean> enableCustomItemGlintColor() {
     return this.enableCustomItemGlintColor;
   }
+
   public ConfigProperty<Color> customItemGlintColor() {
     return this.customItemGlintColor;
   }
@@ -58,13 +64,8 @@ public class GlintColorizerConfig extends AddonConfig {
   public ConfigProperty<Boolean> enableCustomArmorGlintColor() {
     return this.enableCustomArmorGlintColor;
   }
+
   public ConfigProperty<Color> customArmorGlintColor() {
     return this.customArmorGlintColor;
-  }
-
-  public enum ItemEffect {
-    NONE,
-    DEFAULT,
-    GLOW
   }
 }
