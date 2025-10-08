@@ -19,43 +19,37 @@ public class ColoredVertexConsumer implements VertexConsumer {
 
   @Override
   public VertexConsumer vertex(double x, double y, double z) {
-    this.delegate.vertex(x, y, z);
-    return this;
+    return this.delegate.vertex(x, y, z);
   }
 
   @Override
   public VertexConsumer color(int red, int green, int blue, int alpha) {
-    this.delegate.color(
+    return this.delegate.color(
         (int) (red * this.red),
         (int) (green * this.green),
         (int) (blue * this.blue),
         alpha
     );
-    return this;
   }
 
   @Override
   public VertexConsumer uv(float u, float v) {
-    this.delegate.uv(u, v);
-    return this;
+    return this.delegate.uv(u, v);
   }
 
   @Override
   public VertexConsumer overlayCoords(int u, int v) {
-    this.delegate.overlayCoords(u, v);
-    return this;
+    return this.delegate.overlayCoords(u, v);
   }
 
   @Override
   public VertexConsumer uv2(int u, int v) {
-    this.delegate.uv2(u, v);
-    return this;
+    return this.delegate.uv2(u, v);
   }
 
   @Override
   public VertexConsumer normal(float x, float y, float z) {
-    this.delegate.normal(x, y, z);
-    return this;
+    return this.delegate.normal(x, y, z);
   }
 
   @Override
