@@ -14,9 +14,11 @@ public class CustomRenderTypes extends RenderType {
       7,
       256,
       RenderType.CompositeState.builder()
-          .setTextureState(
-              new RenderStateShard.TextureStateShard(ItemRenderer.ENCHANT_GLINT_LOCATION, true,
-                  false))
+          .setTextureState(new RenderStateShard.TextureStateShard(
+              ItemRenderer.ENCHANT_GLINT_LOCATION,
+              true,
+              false
+          ))
           .setWriteMaskState(COLOR_WRITE)
           .setCullState(NO_CULL)
           .setDepthTestState(NO_DEPTH_TEST)
@@ -31,9 +33,11 @@ public class CustomRenderTypes extends RenderType {
       7,
       256,
       RenderType.CompositeState.builder()
-          .setTextureState(
-              new RenderStateShard.TextureStateShard(ItemRenderer.ENCHANT_GLINT_LOCATION, true,
-                  false))
+          .setTextureState(new RenderStateShard.TextureStateShard(
+              ItemRenderer.ENCHANT_GLINT_LOCATION,
+              true,
+              false
+          ))
           .setWriteMaskState(COLOR_WRITE)
           .setCullState(NO_CULL)
           .setDepthTestState(NO_DEPTH_TEST)
@@ -48,9 +52,11 @@ public class CustomRenderTypes extends RenderType {
       7,
       256,
       RenderType.CompositeState.builder()
-          .setTextureState(
-              new RenderStateShard.TextureStateShard(ItemRenderer.ENCHANT_GLINT_LOCATION, true,
-                  false))
+          .setTextureState(new RenderStateShard.TextureStateShard(
+              ItemRenderer.ENCHANT_GLINT_LOCATION,
+              true,
+              false
+          ))
           .setWriteMaskState(COLOR_WRITE)
           .setCullState(NO_CULL)
           .setDepthTestState(NO_DEPTH_TEST)
@@ -65,9 +71,11 @@ public class CustomRenderTypes extends RenderType {
       7,
       256,
       RenderType.CompositeState.builder()
-          .setTextureState(
-              new RenderStateShard.TextureStateShard(ItemRenderer.ENCHANT_GLINT_LOCATION, true,
-                  false))
+          .setTextureState(new RenderStateShard.TextureStateShard(
+              ItemRenderer.ENCHANT_GLINT_LOCATION,
+              true,
+              false
+          ))
           .setWriteMaskState(COLOR_WRITE)
           .setCullState(NO_CULL)
           .setDepthTestState(NO_DEPTH_TEST)
@@ -76,8 +84,16 @@ public class CustomRenderTypes extends RenderType {
           .createCompositeState(false)
   );
 
-  private CustomRenderTypes(String name, VertexFormat format, int mode, int bufferSize,
-      boolean affectsCrumbling, boolean sortOnUpload, Runnable setupState, Runnable clearState) {
+  private CustomRenderTypes(
+      String name,
+      VertexFormat format,
+      int mode,
+      int bufferSize,
+      boolean affectsCrumbling,
+      boolean sortOnUpload,
+      Runnable setupState,
+      Runnable clearState
+  ) {
     super(name, format, mode, bufferSize, affectsCrumbling, sortOnUpload, setupState, clearState);
   }
 

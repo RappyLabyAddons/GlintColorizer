@@ -6,7 +6,7 @@ import com.mojang.blaze3d.vertex.VertexFormat.Mode;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 
-public abstract class CustomRenderTypes extends RenderType {
+public class CustomRenderTypes extends RenderType {
 
   private static final RenderType GLOW_GLINT = create(
       "glint_glow",
@@ -14,9 +14,11 @@ public abstract class CustomRenderTypes extends RenderType {
       Mode.QUADS,
       256,
       CompositeState.builder()
-          .setTextureState(
-              new TextureStateShard(ItemRenderer.ENCHANT_GLINT_LOCATION, true,
-                  false))
+          .setTextureState(new TextureStateShard(
+              ItemRenderer.ENCHANT_GLINT_LOCATION,
+              true,
+              false
+          ))
           .setWriteMaskState(COLOR_WRITE)
           .setCullState(NO_CULL)
           .setDepthTestState(NO_DEPTH_TEST)
@@ -31,9 +33,11 @@ public abstract class CustomRenderTypes extends RenderType {
       Mode.QUADS,
       256,
       CompositeState.builder()
-          .setTextureState(
-              new TextureStateShard(ItemRenderer.ENCHANT_GLINT_LOCATION, true,
-                  false))
+          .setTextureState(new TextureStateShard(
+              ItemRenderer.ENCHANT_GLINT_LOCATION,
+              true,
+              false
+          ))
           .setWriteMaskState(COLOR_WRITE)
           .setCullState(NO_CULL)
           .setDepthTestState(NO_DEPTH_TEST)
@@ -48,9 +52,11 @@ public abstract class CustomRenderTypes extends RenderType {
       Mode.QUADS,
       256,
       CompositeState.builder()
-          .setTextureState(
-              new TextureStateShard(ItemRenderer.ENCHANT_GLINT_LOCATION, true,
-                  false))
+          .setTextureState(new TextureStateShard(
+              ItemRenderer.ENCHANT_GLINT_LOCATION,
+              true,
+              false
+          ))
           .setWriteMaskState(COLOR_WRITE)
           .setCullState(NO_CULL)
           .setDepthTestState(NO_DEPTH_TEST)
@@ -65,9 +71,11 @@ public abstract class CustomRenderTypes extends RenderType {
       Mode.QUADS,
       256,
       CompositeState.builder()
-          .setTextureState(
-              new TextureStateShard(ItemRenderer.ENCHANT_GLINT_LOCATION, true,
-                  false))
+          .setTextureState(new TextureStateShard(
+              ItemRenderer.ENCHANT_GLINT_LOCATION,
+              true,
+              false
+          ))
           .setWriteMaskState(COLOR_WRITE)
           .setCullState(NO_CULL)
           .setDepthTestState(NO_DEPTH_TEST)
