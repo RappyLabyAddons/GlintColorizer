@@ -22,6 +22,9 @@ labyMod {
 
     minecraft {
         registerVersion(versions.toTypedArray()) {
+
+            accessWidener.set(file("./game-runner/src/${this.sourceSetName}/resources/glintcolorizer-${versionId}.accesswidener"))
+
             runs {
                 getByName("client") {
                     devLogin = true
