@@ -45,8 +45,9 @@ public class MixinItemRenderer {
 
     RenderType glintType;
     if (effect == ItemEffect.GLOW) {
-      glintType =
-          isItem ? CustomRenderTypes.getGlowGlint() : CustomRenderTypes.getGlowEntityGlint();
+      glintType = isItem
+          ? CustomRenderTypes.getGlowGlint()
+          : CustomRenderTypes.getGlowEntityGlint();
     } else {
       glintType = isItem ? RenderType.glint() : RenderType.entityGlint();
     }
@@ -91,7 +92,8 @@ public class MixinItemRenderer {
 
     RenderType glintType;
     if (effect == ItemEffect.GLOW) {
-      glintType = isItem ? CustomRenderTypes.getGlowGlintDirect()
+      glintType = isItem
+          ? CustomRenderTypes.getGlowGlintDirect()
           : CustomRenderTypes.getGlowEntityGlintDirect();
     } else {
       glintType = isItem ? RenderType.glintDirect() : RenderType.entityGlintDirect();

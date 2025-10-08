@@ -24,6 +24,7 @@ public class CustomRenderTypes extends RenderType {
           .setDepthTestState(NO_DEPTH_TEST)
           .setTransparencyState(GLINT_TRANSPARENCY)
           .setTexturingState(GLINT_TEXTURING)
+          .setShaderState(ShaderStateShard.RENDERTYPE_GLINT_SHADER)
           .createCompositeState(false)
   );
 
@@ -43,6 +44,7 @@ public class CustomRenderTypes extends RenderType {
           .setDepthTestState(NO_DEPTH_TEST)
           .setTransparencyState(GLINT_TRANSPARENCY)
           .setTexturingState(ENTITY_GLINT_TEXTURING)
+          .setShaderState(ShaderStateShard.RENDERTYPE_ENTITY_GLINT_SHADER)
           .createCompositeState(false)
   );
 
@@ -62,6 +64,7 @@ public class CustomRenderTypes extends RenderType {
           .setDepthTestState(NO_DEPTH_TEST)
           .setTransparencyState(GLINT_TRANSPARENCY)
           .setTexturingState(GLINT_TEXTURING)
+          .setShaderState(ShaderStateShard.RENDERTYPE_GLINT_SHADER)
           .createCompositeState(false)
   );
 
@@ -81,6 +84,7 @@ public class CustomRenderTypes extends RenderType {
           .setDepthTestState(NO_DEPTH_TEST)
           .setTransparencyState(GLINT_TRANSPARENCY)
           .setTexturingState(ENTITY_GLINT_TEXTURING)
+          .setShaderState(ShaderStateShard.RENDERTYPE_ENTITY_GLINT_SHADER)
           .createCompositeState(false)
   );
 
