@@ -2,6 +2,7 @@ package com.rappytv.glintcolorizer.v1_21_1;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.labymod.api.util.Color;
+import org.jetbrains.annotations.NotNull;
 
 public class ColoredVertexConsumer implements VertexConsumer {
 
@@ -18,12 +19,12 @@ public class ColoredVertexConsumer implements VertexConsumer {
   }
 
   @Override
-  public VertexConsumer addVertex(float x, float y, float z) {
+  public @NotNull VertexConsumer addVertex(float x, float y, float z) {
     return this.delegate.addVertex(x, y, z);
   }
 
   @Override
-  public VertexConsumer setColor(int red, int green, int blue, int alpha) {
+  public @NotNull VertexConsumer setColor(int red, int green, int blue, int alpha) {
     return this.delegate.setColor(
         (int) (red * this.red),
         (int) (green * this.green),
@@ -33,22 +34,22 @@ public class ColoredVertexConsumer implements VertexConsumer {
   }
 
   @Override
-  public VertexConsumer setUv(float v, float v1) {
+  public @NotNull VertexConsumer setUv(float v, float v1) {
     return this.delegate.setUv(v, v1);
   }
 
   @Override
-  public VertexConsumer setUv1(int i, int i1) {
+  public @NotNull VertexConsumer setUv1(int i, int i1) {
     return this.delegate.setUv1(i, i1);
   }
 
   @Override
-  public VertexConsumer setUv2(int i, int i1) {
+  public @NotNull VertexConsumer setUv2(int i, int i1) {
     return this.delegate.setUv2(i, i1);
   }
 
   @Override
-  public VertexConsumer setNormal(float v, float v1, float v2) {
+  public @NotNull VertexConsumer setNormal(float v, float v1, float v2) {
     return this.delegate.setNormal(v, v1, v2);
   }
 }
