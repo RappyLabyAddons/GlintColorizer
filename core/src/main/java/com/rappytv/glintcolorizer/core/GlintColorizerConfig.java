@@ -8,6 +8,7 @@ import net.labymod.api.client.gui.screen.widget.widgets.input.color.ColorPickerW
 import net.labymod.api.client.gui.screen.widget.widgets.input.dropdown.DropdownWidget.DropdownSetting;
 import net.labymod.api.configuration.loader.annotation.SpriteSlot;
 import net.labymod.api.configuration.loader.annotation.SpriteTexture;
+import net.labymod.api.configuration.loader.annotation.VersionCompatibility;
 import net.labymod.api.configuration.loader.property.ConfigProperty;
 import net.labymod.api.configuration.settings.annotation.SettingRequires;
 import net.labymod.api.configuration.settings.annotation.SettingSection;
@@ -35,11 +36,13 @@ public class GlintColorizerConfig extends AddonConfig {
   private final ConfigProperty<Color> customItemGlintColor = new ConfigProperty<>(Color.WHITE);
 
   @SettingSection("armor")
+  @VersionCompatibility("1.8<1.20.6")
   @SpriteSlot(x = 2)
   @SwitchSetting
   private final ConfigProperty<Boolean> enableCustomArmorGlintColor = new ConfigProperty<>(true);
 
   @SettingRequires("enableCustomArmorGlintColor")
+  @VersionCompatibility("1.8<1.20.6")
   @SpriteSlot(size = 32, x = 3)
   @ColorPickerSetting(chroma = true)
   private final ConfigProperty<Color> customArmorGlintColor = new ConfigProperty<>(NamedTextColor.AQUA.color());
