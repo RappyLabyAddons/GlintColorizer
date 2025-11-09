@@ -1,6 +1,6 @@
 package com.rappytv.glintcolorizer.v1_12_2.mixins;
 
-import com.rappytv.glintcolorizer.GlintColorizerAddon;
+import com.rappytv.glintcolorizer.core.GlintColorizerAddon;
 import net.labymod.api.util.Color;
 import net.minecraft.client.renderer.entity.layers.LayerArmorBase;
 import org.spongepowered.asm.mixin.Mixin;

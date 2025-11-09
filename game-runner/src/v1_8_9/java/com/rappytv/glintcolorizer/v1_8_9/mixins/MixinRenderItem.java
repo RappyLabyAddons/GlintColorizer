@@ -1,7 +1,7 @@
 package com.rappytv.glintcolorizer.v1_8_9.mixins;
 
-import com.rappytv.glintcolorizer.GlintColorizerAddon;
-import com.rappytv.glintcolorizer.GlintColorizerConfig.ItemEffect;
+import com.rappytv.glintcolorizer.api.ItemEffect;
+import com.rappytv.glintcolorizer.core.GlintColorizerAddon;
 import net.labymod.api.util.Color;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderItem;
@@ -20,10 +20,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class MixinRenderItem {
 
   @Unique
-  private boolean sandbox$firstDepthCall = true;
+  private boolean glintcolorizer$firstDepthCall = true;
 
   @Inject(method = "renderEffect", at = @At("HEAD"), cancellable = true)
-  private void renderEffect(IBakedModel model, CallbackInfo ci) {
+  private void cancelGlintRendering(IBakedModel model, CallbackInfo ci) {
     if(GlintColorizerAddon.getItemEffect() == ItemEffect.NONE) {
       ci.cancel();
     }
@@ -31,14 +31,14 @@ public class MixinRenderItem {
 
   @Redirect(method = "renderEffect", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/GlStateManager;depthFunc(I)V"))
   private void modifyDepthFunc(int i) {
-    if(this.sandbox$firstDepthCall) {
+    if(this.glintcolorizer$firstDepthCall) {
       if(GlintColorizerAddon.getItemEffect() != ItemEffect.GLOW) {
         GlStateManager.depthFunc(GL11.GL_EQUAL);
       }
     } else {
       GlStateManager.depthFunc(i);
     }
-    this.sandbox$firstDepthCall = !this.sandbox$firstDepthCall;
+    this.glintcolorizer$firstDepthCall = !this.glintcolorizer$firstDepthCall;
   }
 
   @ModifyConstant(method = "renderEffect", constant = @Constant(intValue = -8372020))

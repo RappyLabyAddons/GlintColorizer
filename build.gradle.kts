@@ -6,7 +6,7 @@ plugins {
 val versions = providers.gradleProperty("net.labymod.minecraft-versions").get().split(";")
 
 group = "org.example"
-version = providers.environmentVariable("VERSION").getOrElse("1.0.0")
+version = providers.environmentVariable("VERSION").getOrElse("1.0.1")
 
 labyMod {
     defaultPackageName = "com.rappytv.glintcolorizer"
@@ -16,12 +16,15 @@ labyMod {
         displayName = "GlintColorizer"
         author = "RappyTV"
         description = "Lets you adjust the color of enchanted items and armor."
-        minecraftVersion = "1.8.9,1.12.2"
+        minecraftVersion = "1.8.9<1.21.4"
         version = rootProject.version.toString()
     }
 
     minecraft {
         registerVersion(versions.toTypedArray()) {
+
+            accessWidener.set(file("./game-runner/src/${this.sourceSetName}/resources/glintcolorizer-${versionId}.accesswidener"))
+
             runs {
                 getByName("client") {
                     devLogin = true
